@@ -1,0 +1,426 @@
+// Variables
+@import 'variables';
+
+// needed for font-awesome
+$fa-font-path: '../webfonts';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+@import '~@fortawesome/fontawesome-free/scss/solid.scss';
+@import '~@fortawesome/fontawesome-free/scss/brands.scss';
+// Pretty Checkboxes
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+// Admin LTW
+@import '~admin-lte/dist/css/adminlte.min.css';
+
+
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+html {
+   position: relative;
+   height: auto;
+   min-height: 100% !important;
+}
+
+body {
+  background-color: #fafafa;
+  color:#000; /* $gua-darkText; */
+  font-family: $font-family-basic;
+  font-size: $font-size-basic;
+  font-style: $font-style-basic;
+  font-weight: 400;
+  font-display: swap;
+  padding: 0;
+  // margin: 0 0 75px 0;
+}
+
+
+/* -------------------------------------------------------------------
+   Links aufhuebschen
+   ------------------------------------------------------------------- */
+.truncate {
+  width: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+::placeholder {
+  color: $dda-grey !important;
+  font-style:italic;
+}
+
+
+h1, h2, h3, h4, h5 {
+  font-family: $font-family-headlines;
+  font-weight: 300;
+  font-display: swap;
+}
+h1,h2 {
+  color: $dda-blue;
+  // font-style: italic;
+}
+h2 {
+  margin: 25px 0 15px 0;
+}
+
+h3 {
+  padding-bottom: .5rem;
+}
+
+strong {
+  color: #000;
+  font-style: bold;
+}
+
+hr.separator {
+  border: 1px solid transparent;
+}
+
+.inline-icon {
+  height:auto;
+  opacity:.8;
+  width:24px;
+}
+.nav-link:hover .inline-icon {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.router-link-active, .router-link-exact-active {
+  background-color: $dda-highlight;
+  color: #fff !important;
+}
+
+/* -------------------------------------------------------------------
+   Center things
+   ------------------------------------------------------------------- */
+.center {
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(50%, 50%);
+}
+
+/* -------------------------------------------------------------------
+   Weiten fuer Tabellenfelder
+   ------------------------------------------------------------------- */
+   .input-sm {
+     padding: 2px;
+     font-size: .8rem;
+     height:24px;
+     width: 100%;
+     text-align: center;
+   }
+   .table-overview th, .table-overview td {
+      margin: 0;
+      padding: 0;
+   }
+   .btnWidth {
+     width: 36px;  max-width: 36px;  min-width: 36px;
+   }
+   .miniWidth {
+     width: 64px;  max-width: 64px;  min-width: 64px;
+   }
+   .dateWidth {
+     width: 128px; max-width: 128px; min-width: 128px;
+   }
+   .smallWidth {
+     width: 96px;  max-width: 96px;  min-width: 96px;
+   }
+   .shortWidth {
+     width: 128px; max-width: 128px; min-width: 128px;
+   }
+   .mediumWidth {
+     width: 256px; max-width: 256px; min-width: 256px;
+   }
+   .longWidth {
+     width: 512px; max-width: 512px; min-width: 512px;
+   }
+
+/* -------------------------------------------------------------------
+   Transition fuer vue
+   ------------------------------------------------------------------- */
+.fade-enter-active, .fade-leave-active {
+ transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+ opacity: 0;
+}
+
+
+/* -------------------------------------------------------------------
+   einige special icons
+   ------------------------------------------------------------------- */
+.deadBird {
+  height: auto;
+  opacity: .75;
+  width: 150px;
+}
+.deadBird_lg {
+  width: 300px;
+}
+
+.icon {
+ cursor: pointer;
+}
+.icon:before ,.icon::after {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+a:hover {
+  text-decoration: none;
+}
+a[href^="downloads"]::before, a[href^="./"]::before, .anchor::before,
+a[href^="mailto"]::after, a[href^="http"]::after, a[href^="https"]::after {
+  content: '\f124';
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 70%;
+  line-height: 15px;
+  margin-left: 4px;
+  margin-right: 4px;
+  color: inherit;
+}
+a[href^="mailto"]::after, a[href^="http"]::after, a[href^="https"]::after {
+    vertical-align: top;
+}
+a[href^="mailto"]::after {
+  content: '\f0e0';
+}
+a.nosign::after, a.nosign::before {
+    font-size: 1em;
+    line-height: 100%;
+    content: '';
+    vertical-align: middle;
+    margin: 0;
+}
+
+.anchor::before {
+  color: inherit;  content: "\f124";  /* Link */
+/*  color: $dda-blue;  content: "\f124";  /* Link */
+}
+.back::before {
+  color: inherit;  content: "\f137";  /* chevron in box nach links */
+}
+.checked::before {
+ color: 'inherit'; content: "\f058";  /* check in circle */
+}
+.checkedPlain::before {
+ color: 'inherit'; content: "\f00c";  /* plain check */
+}
+.forward::before {
+  color: inherit;  content: "\f138";  /* chevron in box nach rechts */
+}
+.mandatory::before {
+  color: $dda-red; content: "\f005";  /* star */
+  cursor: auto;
+}
+.delete::before {
+  color: inherit; content: "\f057";  /* times in circle */
+}
+.closeLayer::before {
+  color: $dda-text; content: "\f00d";  /* times */
+}
+.edit::before {
+  color: inherit; content: "\f303";  /* pencil */
+}
+.editSquare::before {
+  color: inherit; content: "\f14b";  /* pencil in box */
+}
+.end::before {
+  color: inherit; content: "\f253";  /* hourglass-end */
+}
+.endless::after {
+  color: inherit; content: "\f534";  /* endloszeichen ' */
+}
+.envelope::before {
+  color: inherit; content: "\f0e0";  /* envelope */
+}
+.eye::before {
+  color: inherit; content: "\f06e";  /* eye -> 'see' */
+}
+.eye-slash::before {
+  color: inherit; content: "\f070";  /* eye with slash -> 'no see' */
+}
+.help::after {
+  color: inherit; content: "\f059";  /* question-mark ' */
+}
+.idea::after {
+  color: inherit; content: "\f0eb";  /* bulb ' */
+}
+
+// .info::before {
+//   color: inherit; content: "\f05a";  /* i in circle */
+// }
+.minus::before {
+ color: inherit; content: "\f056";  /* minus in circle */
+}
+.more::before {
+ color: inherit; content: "\f0a9";  /* arrow in circle */
+}
+.news::before {
+ color: inherit; content: "\f1ea";  /* newspaper */
+}
+.plus::before {
+ color: inherit; content: "\f055";  /* plus in circle */
+}
+.running::after {
+  color: inherit; content: "\f252";  /* hourglass-middle ' */
+}
+.save::before {
+ color: inherit; content: "\f0c7";  /* disk */
+}
+.map::before {
+  color: inherit; content: "\f3c5";  /* googleMaps marker */
+}
+.table::before {
+ color: inherit; content: "\f0ce";  /* table symbol */
+}
+.sync::before {
+ color: inherit; content: "\f021";  /* synchronize symbol */
+}
+.times::before {
+ color: inherit; content: "\f00d";  /* times symbol */
+}
+.btn-inline {
+  margin: 0 4px 0 0;
+  float: left;
+}
+
+
+
+/* -------------------------------------------------------------------
+   Farben in Tabelle der Überstunden / Urlaube
+   ------------------------------------------------------------------- */
+   .calendar {
+     border:1px solid #e0e0e0;
+   }
+   .weekend {
+     background-color: rgb(209,214,218);
+   }
+   .holidayHalf {
+     background-color: #38c172;
+     color: #fff;
+   }
+   .holidayFull {
+     background-color: rgba(0,117,92, .75);
+     color: #fff;
+   }
+   .offDay {
+     background-color: rgba(163,171,177,1);
+     color: #fff;
+   }
+   .overtimeHalf {
+     background-color: #6cb2eb;
+     color: #fff;
+   }
+   .overtimeFull {
+     background-color: rgba(0,97,161, .75);
+     color: #fff;
+   }
+   .overtimeDone {
+     background-color: #f6993f;
+     color: #fff;
+   }
+   .overtimeRemaining {
+     background-color: rgb(66,66,66);
+     color: #fff;
+   }
+   .overtimeTaken {
+     background-color: #6cb2eb;
+     color: #fff;
+   }
+   .halfAndHalf {
+     background: rgb(191,220,214);
+     background: linear-gradient(127deg, #38c172 50%, #6cb2eb 50%);
+   }
+
+/* -------------------------------------------------------------------
+   Tabellenfelder
+   ------------------------------------------------------------------- */
+.btnWidth {
+  width: 36px;  max-width: 36px;  min-width: 36px;
+}
+.miniWidth {
+  width: 64px;  max-width: 64px;  min-width: 64px;
+}
+.dateWidth {
+  width: 128px; max-width: 128px; min-width: 128px;
+}
+.smallWidth {
+  width: 96px;  max-width: 96px;  min-width: 96px;
+}
+.shortWidth {
+  width: 128px; max-width: 128px; min-width: 128px;
+}
+.mediumWidth {
+  width: 256px; max-width: 256px; min-width: 256px;
+}
+.longWidth {
+  width: 512px; max-width: 512px; min-width: 512px;
+}
+
+
+.isVisible::before {
+  color: $dda-lightergreen; content: "\f06e";  /* eye */
+  cursor: auto;
+}
+.isNotVisible::before {
+  color: $dda-red; content: "\f070";  /* eye slash */
+  cursor: auto;
+}
+
+.indicateHint {
+  padding-bottom: 2px;
+  border-bottom: 1px dashed $dda-text;
+}
+
+/* -------------------------------------------------------------------
+   DDA Liste
+   ------------------------------------------------------------------- */
+ ul.ddaList {
+   list-style-type: none;
+   margin-left: 25px;
+ }
+ ul.ddaList li {
+   margin-left:24px;
+ }
+ ul.ddaList li::before {
+    padding-right: 8px;
+    margin-left: -26px;
+ }
+ .more::before, ul.ddaList li::before {
+     content: "\f138";
+     font-family: "Font Awesome 5 Free";
+     font-weight: 900;
+     padding-right: 8px;
+ }
+
+/* -------------------------------------------------------------------
+   Re-color the sidebar menu
+   ------------------------------------------------------------------- */
+[class*=sidebar-dark-] {
+    background-color: $dda-blue;
+    color: #fff;
+}
+[class*=sidebar-dark] .user-panel {
+    border-bottom: 1px solid rgba(255,255,255,.1);
+}
+[class*=sidebar-dark] .brand-link {
+    // border-bottom: 1px solid rgba(255,255,255,.1);
+    border-bottom: 0 !important;
+    color: rgba(255,255,255,.8);
+}
+
+.sidebar-dark-primary .nav-sidebar>.nav-item>.nav-link.active, .sidebar-light-primary .nav-sidebar>.nav-item>.nav-link.active {
+    background-color: $dda-darkerblue;
+    color: #fff;
+}

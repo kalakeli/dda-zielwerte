@@ -1,0 +1,81 @@
+// Body
+$body-bg: #f8fafc;
+
+// Body
+$body-bg: #f8fafc;
+
+// Typography
+$font-family-headlines: 'Roboto', sans-serif;
+$font-family-condensed: 'Open Sans Condensed', sans-serif;
+$font-family-condensed-weight: 400;
+$font-size-condensed: 1.1em;
+$font-style-condensed: normal;
+$line-height-condensed: 1.6;
+// $font-family-basic: 'Open Sans Condensed', sans-serif;
+$font-family-basic: 'Open Sans', sans-serif;
+$font-family-basic-weight: 400;
+$font-size-basic: 1em;
+$font-style-basic: normal;
+$line-height-basic: 1.6;
+
+$font-size-lists: 1em;
+$font-size-smaller: .9em;
+$line-height-lists: 1.6;
+
+
+$dda-blue: #0061a1;
+$dda-darkerblue: darken(#0061a1, 5%);
+$dda-highlight: rgb(246,169,36);
+$dda-green: rgb(0,117,92);
+$dda-lightergreen: lighten(rgb(0,117,92), 10%);
+$dda-grey: rgb(163,171,177);
+$dda-lightgrey: rgb(209,214,218);
+$dda-red: rgb(207,0,61);
+$dda-yellow: rgb(255,225,68);
+$dda-text: rgb(111,111,111);
+$dda-darktext: rgb(66,66,66);
+
+$dda-warning: #E66560;
+
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #9561e2;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+
+/* convert to classes */
+.dda-blue { color: #0061a1; }
+.dda-highlight { color: rgb(246,169,36); }
+.dda-green { color: rgb(0,117,92); }
+.dda-grey { color: rgb(163,171,177); }
+.dda-lightgrey { color: rgb(209,214,218); }
+.dda-red { color: rgb(207,0,61); }
+.dda-yellow { color: rgb(255,225,68); }
+.dda-text { color: rgb(111,111,111); }
+.dda-darktext { color: rgb(66,66,66); }
+.dda-warning { color: #E66560; }
+.bg-blue { background-color: #0061a1; }
+.bg-highlight { background-color: rgb(246,169,36); }
+.bg-green { background-color: rgb(0,117,92); }
+.bg-grey { background-color: rgb(163,171,177); }
+.bg-lightgrey { background-color: rgb(209,214,218); }
+.bg-red { background-color: rgb(207,0,61); }
+.bg-yellow { background-color: rgb(255,225,68); }
+.bg-text { background-color: rgb(111,111,111); }
+.bg-darktext { background-color: rgb(66,66,66); }
+.bg-warning { background-color: #E66560; }
+.blue { color: #3490dc; }
+.indigo { color: #6574cd; }
+.purple { color: #9561e2; }
+.pink { color: #f66D9b; }
+.red { color: #e3342f; }
+.orange { color: #f6993f; }
+.yellow { color: #ffed4a; }
+.green { color: #38c172; }
+.teal { color: #4dc0b5; }
+.cyan { color: #6cb2eb; }
